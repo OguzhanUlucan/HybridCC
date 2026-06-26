@@ -169,7 +169,7 @@ REPORTED_RESULTS/
 ## 7. Citation
 
 *(Citation will be added upon publication.)*
-* Will appear in ECCV 2026. *
+* Will appear in ECCV 2026. 
 
 ## 8. License
 
