@@ -1,7 +1,7 @@
 # Multi-Block-Attention-based Color Constancy (ECCV 2026)
 
 *[Oguzhan Ulucan](https://scholar.google.com/citations?user=GDBJBzMAAAAJ), [Diclehan Ulucan](https://scholar.google.com/citations?user=JB3hc3cAAAAJ), and [Marc Ebner](https://scholar.google.com/citations?user=uA-5xdIAAAAJ)*
-University of Greifswald, GermanyUniversity of Greifswald, Germany
+University of Greifswald, Germany
 
 > Code and trained models for 
 > "Multi-Block-Attention-based Color Constancy".
