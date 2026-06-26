@@ -1,0 +1,16 @@
+data:
+  root: /path/to/Dataset/nus/all_images
+  csv:  /path/to/Dataset/nus/test_csv/test.csv
+
+model:
+  ckpt:  /path/to/best.ckpt
+  # For example, to test the model on NUS-8, use the model in ./REPORTED_RESULTS/NUS/best.ckpt
+  # Be sure that, while training the model, do not use NUS-8.
+
+eval:
+  size: 384
+  batch_size: 128
+  num_workers: 12
+  amp: true
+  save_csv: /path/to/per_image_results.csv 
+  #to save the results please specify a location

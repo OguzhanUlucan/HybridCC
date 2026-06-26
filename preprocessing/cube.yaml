@@ -1,0 +1,13 @@
+# Cube+ to example preprocessed format
+
+# Input directory containing images
+# This is where the downloaded images are.
+# After downloading the dataset, please make sure to put all images into same folder.
+input: /path/to/all_images
+
+
+# Output directory (will create all_images/ subfolder)
+output: /path/to/desired/cube_plus
+
+# Path to downloaded ground truth file
+gt: /path/to/cube+_gt.txt

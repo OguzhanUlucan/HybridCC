@@ -1,0 +1,85 @@
+experiment:
+  out_dir: Example_dir
+  name: Example_Folder
+
+# To train on multiple dataset, please specify the corresponding paths
+# Training suports both multiple, and single-source training.
+
+data:
+  sources:
+    - train_csv: /path/to/Dataset/intel/train_csv/train.csv
+      val_csv: /path/to/Dataset/intel/train_csv/val.csv
+      root: /path/to/Dataset/intel/all_images
+    
+    - train_csv: /path/to/Dataset/gehler/train_csv/train.csv
+      val_csv: /path/to/Dataset/gehler/train_csv/val.csv
+      root: /path/to/Dataset/gehler/all_images
+      
+    - train_csv: /path/to/Dataset/cube/train_csv/train.csv
+      val_csv: /path/to/Dataset/cube/train_csv/val.csv
+      root: /path/to/Dataset/cube/all_images
+
+#========== To test on NUS-8, do not use NUS-8 during training by commenting out these lines
+    #- train_csv: /path/to/Dataset/nus/train_csv/train.csv
+    #  val_csv: /path/to/Dataset/nus/train_csv/val.csv
+    #  root: /path/to/Dataset/nus/all_images
+
+    #- train_csv: /path/to/Dataset/nus/cs/cs_SonyA57/train_csv/train.csv
+    #  val_csv: /path/to/nus/Dataset/cs/cs_SonyA57/train_csv/val.csv
+    #  root: /path/to/Dataset/nus/all_images
+      #Canon1DsMkIII, Canon600D, FujifilmXM1, NikonD5200, OlympusEPL6, PanasonicGX1, SamsungNX2000, SonyA57
+
+# =============================
+  balance_sources: true
+  batch_size: 32
+  num_workers: 8 
+
+augmentation:
+  crop_size: 384
+  include_original: true
+  crops_per_image: 3
+  hflip_p: 0.5
+  vflip_p: 0.5
+  scale_range: [0.1, 1.0]
+  augmentation_angle: 360.0
+  gain_range: [0.8, 1.2]
+  gain_prob: 0.5
+  color_aug_strength: 0.4
+
+model:
+  block_size: [32, 32] 
+  pretrained: true
+  sat_thresh: 0.97 
+  wp_temperature: 1.2 
+  wp_tau_init: 0.02 
+  backbone_exit_layer: 8
+  backbone_encoder_dim: 64
+  stat_encoder_dim: 64 
+  cp_hidden: 64 
+  trunk_dropout: 0.20
+  cross_attn_dropout: 0.15
+  cross_attn_heads: 2
+  mix_blocks: 2
+  mix_pw_expand: 2.0
+  mix_dropout: 0.10
+
+train:
+  epochs: 300 
+  amp: true
+  grad_clip_norm: 1.0
+  lr: 3.0e-4
+  weight_decay: 5.0e-5
+  backbone_lr_scale: 0.1
+  lr_schedule:
+    type: cosine
+    warmup_epochs: 20 
+    T_max: 180
+    min_lr: 5.0e-6
+  deterministic: false
+  seed: 1337
+  val_interval: 1
+  early_stop_patience: 30
+  early_stop_min_delta: 0.0005
+
+loss:
+  lambda_sparsity: 5.0e-4

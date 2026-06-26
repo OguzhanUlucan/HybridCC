@@ -1,0 +1,14 @@
+# ---------------------------------------------------------------------------
+# This project was developed with torch 2.6.0 / torchvision 0.21.0 on CUDA 12.4.
+# ---------------------------------------------------------------------------
+
+numpy==2.4.6
+pandas==3.0.3
+scipy==1.17.1
+opencv-python-headless==4.13.0.92
+tifffile==2026.6.1
+imagecodecs==2026.6.6
+imageio==2.37.3
+pillow==12.2.0
+PyYAML==6.0.3
+tqdm==4.67.3

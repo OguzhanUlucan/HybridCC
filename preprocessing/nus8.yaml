@@ -1,0 +1,21 @@
+# NUS8 to example preprocessed format
+
+# Input directory containing NUS8 camera folders
+input: /path/to/all-nus-cameras
+
+# Output directory (will create all_images/ subfolder)
+output: /path/to/desired/nus/
+
+# Mask color checker region
+mask_cc: true
+
+# Specific cameras to process (comment out to process all)
+#cameras:
+#   - Canon1DsMkIII
+#   - Canon600D
+#   - FujifilmXM1
+#   - NikonD5200
+#   - OlympusEPL6
+#   - PanasonicGX1
+#   - SamsungNX2000
+#   - SonyA57
