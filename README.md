@@ -71,11 +71,6 @@ The CSV split files store the image names and their ground-truth illuminant.
 
 ### Preprocessing
 
-- **Intel-TAU**: used as distributed (black-level corrected, color-checker masked).
-- **TA-AWB**: used as distributed (black-level corrected). 
-- **Gehler-Shi**: download the reprocessed ColorChecker dataset and apply the provided
-  masks (ColorChecker, saturated, clipped pixels). We used the RECommended (2018) version 
-[colorconstancy.com datasets page](https://www.colorconstancy.com/evaluation/datasets/index.html#colorcheckerhemrit).  
 - **NUS-8** and **Cube+**: download the datasets and then run `preprocessing/process_nus.py` 
 and `preprocessing/process_cube.py` (see `preprocessing/` for usage and config files).
 
