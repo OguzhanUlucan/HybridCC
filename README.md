@@ -164,6 +164,7 @@ REPORTED_RESULTS/
 
 ## 7. Citation
 
+```
 @inproceedings{ulucan2026multi,
   title={Multi-block-Attention-Based Color Constancy},
   author={Ulucan, Oguzhan and Ulucan, Diclehan and Ebner, Marc},
@@ -172,6 +173,7 @@ REPORTED_RESULTS/
   year={2026},
   organization={Springer}
 }
+```
 
 ## 8. License
 
