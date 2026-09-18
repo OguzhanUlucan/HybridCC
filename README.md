@@ -164,8 +164,14 @@ REPORTED_RESULTS/
 
 ## 7. Citation
 
-*(Citation will be added upon publication.)*
-* Will appear in ECCV 2026. 
+@inproceedings{ulucan2026multi,
+  title={Multi-block-Attention-Based Color Constancy},
+  author={Ulucan, Oguzhan and Ulucan, Diclehan and Ebner, Marc},
+  booktitle={European Conference on Computer Vision},
+  pages={645--663},
+  year={2026},
+  organization={Springer}
+}
 
 ## 8. License
 
